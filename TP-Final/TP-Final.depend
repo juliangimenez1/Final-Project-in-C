@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1593222283 source:c:\users\julia\desktop\facultad\programacion, laboratoria\trabajos practicos\tp-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+
+1602969486 source:c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
+1602969598 source:c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\clientes.c
+	"clientes.h"
+	"utilidades.h"
+	<stdio.h>
+
+1602968267 c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\clientes.h
+
+1602969556 source:c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\utilidades.c
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
+1602969377 c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\utilidades.h
+	"clientes.h"
+
+1602969178 c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\consumos.h
+	"clientes.h"
+
+1602969325 source:c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\consumos.c
+	"consumos.h"
+	"clientes.h"
+	<stdio.h>
+	<time.h>
+	"utilidades.h"
+
