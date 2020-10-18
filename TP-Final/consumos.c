@@ -9,7 +9,12 @@
 #define DIM_CLI 100
 
 
-///GUARDA UN CONSUMO EN ARCHIVO
+
+/*******************//**
+* \brief Funcion que guarda un consumo en el archivo de consumos
+* \param Recibe un consumo
+* \return Void
+**************************/
 void guardarUnConsumo(stConsumo consumo)
 {
     FILE *pArchConsumos=fopen(AR_CONSUMOS,"ab");
@@ -20,7 +25,11 @@ void guardarUnConsumo(stConsumo consumo)
     }
 }
 
-/// CARGA UN CONSUMO, RETORNA EL CONSUMO
+/*******************//**
+* \brief Funcion que completa los campos de un stConsumo validando los mismos y lo retorna cargado
+* \param None
+* \return retorna el Consumo
+**************************/
 stConsumo cargaUnConsumo ()
 {
     int dni =0;
@@ -65,7 +74,11 @@ stConsumo cargaUnConsumo ()
     return consumo;
 }
 
-///BUSCA UN CLIENTE AL AZAR Y LO RETORNA
+/*******************//**
+* \brief Funcion que retorna un cliente al azar del archivo de clientes
+* \param None
+* \return Retorna el cliente
+**************************/
 stCliente clienteRandom ()
 {
     stCliente c;
@@ -87,7 +100,11 @@ stCliente clienteRandom ()
     return c;
 }
 
-///BUSCA EL ULTIMO ID DE CONSUMOS
+/*******************//**
+* \brief Funcion que retorna el ultimo ID de los consumos
+* \param None
+* \return retorna el utimo ID. Si no encuentra, retorna id en -1
+**************************/
 int buscoUltimoIDConsumos()
 {
     stConsumo c;
@@ -105,7 +122,11 @@ int buscoUltimoIDConsumos()
     return id;
 }
 
-///CARGA EL ARCHIVO CON UN CONSUMO
+/*******************//**
+* \brief Funcion de carga del archivo de consumos
+* \param None
+* \return Void
+**************************/
 void cargaArchListaConsumos()
 {
     stConsumo c;
@@ -122,7 +143,12 @@ void cargaArchListaConsumos()
         system("cls");
     }
 }
-///MUESTRA UN CONSUMO, RECIBE EL CONSUMO
+
+/*******************//**
+* \brief Funcion para mostrar un solo consumo
+* \param stConsumo c
+* \return Void
+**************************/
 void muestraUnConsumo(stConsumo c)
 {
     printf("------------------------------------\n");
@@ -134,7 +160,11 @@ void muestraUnConsumo(stConsumo c)
 
 }
 
-///MUESTRA TODOS LOS CONSUMOS
+/*******************//**
+* \brief Funcion que muestra todos los consumos de un archivo
+* \param None
+* \return Void
+**************************/
 void mostrarArchConsumos()
 {
     stConsumo c;
@@ -149,10 +179,11 @@ void mostrarArchConsumos()
     }
 }
 
-/****************************************
-MODIFICA LOS DATOS CONSUMIDOS DE CONSUMO.
-BUSCO X DNI AL CLIENTE, BUSCO FECHA DE CONSUMO Y MODIFICO.
-****************************************/
+/*******************//**
+* \brief Funcion que busca un cliente por DNI, pide Fecha exacta de un consumo, y si encuentra lo modifica
+* \param None
+* \return Void
+**************************/
 void modificacionConsumo()
 {
     stCliente c;
@@ -199,11 +230,11 @@ void menuModificacionConsumo()
     printf("ESC para salir...");
 }
 
-/****************************************
-MODIFICO CONSUMO, RECIBO UN CONSUMO A.
-OPCIONES 1: MODIFICO DATO CONSUMIDO.
-OPCION 2: GUARDO MODIFICACION EN ARCHIVO.
-****************************************/
+/*******************//**
+* \brief Funcion que modifica consumos del archivo de consumos
+* \param Recibe el consumo cargado
+* \return Void
+**************************/
 void modificarConsumo(stConsumo a)
 {
 
@@ -231,11 +262,11 @@ void modificarConsumo(stConsumo a)
 
 
 }
-/****************************************
-CAMBIO CONSUMO, RECIBO CONSUMO A.
-CAMBIO DATOS CONUMIDOS.
-RETORNO EL CONSUMO.
-****************************************/
+/*******************//**
+* \brief Funcion que recibe un consumo y lo modifica
+* \param stConsumo a (el consumo a modificar)
+* \return Retorna el consumo nuevo
+**************************/
 stConsumo cambiarConsumo(stConsumo a)
 {
 
@@ -253,10 +284,11 @@ stConsumo cambiarConsumo(stConsumo a)
 
     return a;
 }
-/****************************************
-MODIFICO CONSUMO, RECIBO EL CONSUMO MODIFICADO.
-GUARDO EN EL ARCHIVO DE LA MISMA POSICION.
-****************************************/
+/*******************//**
+* \brief Funcio para guardar un consumo modificado en el archivo de consumos
+* \param Recibo el consumo
+* \return Void
+**************************/
 void modifRegistroCONSUMOS(stConsumo c)
 {
     int pos;
@@ -269,12 +301,11 @@ void modifRegistroCONSUMOS(stConsumo c)
         fclose(pArchConsumo);
     }
 }
-/****************************************
-BUSCO LA POSICION EN ARCHIVO CONSUMO.
-RECIBO UNA ID.
-LO BUSCO Y RETORNO POSICION.
-SI NO EXISTE RETORNO -1.
-****************************************/
+/*******************//**
+* \brief Funcion que busca a posicion de un consumo por ID en el archivo de consumos
+* \param Recibo el ID de consumo
+* \return Retorno en bytes la posicion del consumo. Retorna -1 si no fue encontrado
+**************************/
 int buscaPosicionCONSUMO(int id)
 {
     int pos=-1;
@@ -295,12 +326,11 @@ int buscaPosicionCONSUMO(int id)
     return pos;
 }
 
-/****************************************
-BUSCO ID EN EL CONSUMO.
-RECIBO EL ID, Y LA FECHA DEL CONSUMO.
-RETORNO EL CONSUMO... LA POSICION SI EXISTE.
-Y -1 SI NO EXISTE.
-****************************************/
+/*******************//**
+* \brief Funcion que busca un consumo en el archivo por ID de cliente, anio, mes y dia
+* \param int id, int anio, int mes, int dia
+* \return Retorna el consumo. Si no lo encuentra retorna el consumo con id -1
+**************************/
 stConsumo buscaxIDConsumo(int id, int anio, int mes, int dia)
 {
     stConsumo a;
@@ -324,6 +354,11 @@ stConsumo buscaxIDConsumo(int id, int anio, int mes, int dia)
     return a;
 }
 
+/*******************//**
+* \brief Funcion que da de baja un consumo buscado por Fecha y DNI del usuario
+* \param None
+* \return Void
+**************************/
 void modificoBajaConsumo()
 {
     stCliente cliente;
@@ -377,6 +412,11 @@ void modificoBajaConsumo()
 
 }
 
+/*******************//**
+* \brief Funcion que busca un consumo en una fecha exacta
+* \param int anio, int mes, int dia
+* \return Void
+**************************/
 void buscarConsumoFecha(int anio, int mes, int dia)
 {
     stConsumo a;
@@ -393,6 +433,12 @@ void buscarConsumoFecha(int anio, int mes, int dia)
         fclose(pArchConsumo);
     }
 }
+
+/*******************//**
+* \brief Funcion que pregunta y muestra un consumo en una fecha exacta
+* \param None
+* \return Void
+**************************/
 void preguntaFechaConsumo()
 {
     int anio;
@@ -407,11 +453,11 @@ void preguntaFechaConsumo()
     system("cls");
     buscarConsumoFecha(anio,mes,dia);
 }
-/**
+/****************************//**
 * \brief Funcion que retorna la maxima cantidad de dias que tiene algun mes del anio (hasta mes 6)
 * \param Recibe el mes
 * \return Retorna la cantidad de dias de ese mes
-**/
+********************************/
 int diaMax (int mes)
 {
     int dias; ///cantidad de dias que va a tener el mes
@@ -433,7 +479,11 @@ int diaMax (int mes)
 
 }
 
-
+/*******************//**
+* \brief Funcuon que genera un consumo random
+* \param None
+* \return Retorna un consumo al azar
+**************************/
 stConsumo ConsumoRandom()
 {
     stConsumo consumo;
@@ -463,6 +513,11 @@ stConsumo ConsumoRandom()
     return consumo; ///retorno un consumo con datos al azar
 }
 
+/*******************//**
+* \brief Funcion que carga consumos aleatorios en el archivo
+* \param None
+* \return Void
+**************************/
 void CargaUnConsmoRandom()
 {
     stConsumo c;
@@ -480,6 +535,12 @@ void CargaUnConsmoRandom()
     }
 
 }
+
+/*******************//**
+* \brief Funcion que verifica la fecha de un consumo para que este no se repita
+* \param Recibe el consumo
+* \return Retorna 0 si no existe dicho consumo, 1 si existe en dicha fecha
+**************************/
 int verficaFecha(stConsumo a)
 {
     stConsumo c;
@@ -504,6 +565,11 @@ int verficaFecha(stConsumo a)
     return flag;
 }
 
+/*******************//**
+* \brief Funcion que busca el mes que mas se consumio en el archivo
+* \param None
+* \return Retorna el mes de mayor consumo
+**************************/
 int buscarMesMAX()
 {
     int mesMax=0;
@@ -523,6 +589,11 @@ int buscarMesMAX()
     return mesMax;
 }
 
+/*******************//**
+* \brief Funcion que carga una array con los meses de maximo consumo
+* \param array, validos, mesMaximo
+* \return Validos
+**************************/
 int cargarArreglo(int a[], int v, int mesMax)
 {
     int suma;
@@ -549,16 +620,11 @@ int cargarArreglo(int a[], int v, int mesMax)
     return v;
 }
 
-void mostrarArreglo(int a[], int v)
-{
-    int mes = 1;
-    for(int i=1; i<v; i++)
-    {
-        printf("Mes %d se consumieron %d MB \n\n",mes,a[i]);
-        mes++;
-    }
-    printf("\n\n");
-}
+/*******************//**
+* \brief Funcion que compara y retorna el mes mayor de un array
+* \param int a[], int v
+* \return mesMax
+**************************/
 int comprarMesMayor(int a[], int v)
 {
     int mesMax=1;
