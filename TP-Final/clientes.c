@@ -6,12 +6,12 @@
 #define ESC 27
 #define DIM_CLI 100
 
-/**********************************************
-FUNCION TIPO CLIENTE CARGA UNA ESTRUCTURA.
-NO RECIBO NADA.
-CREO ESTRUCTURA, LA CARGO.
-RETORNO ESTRUCTURA CLIENTE.
-**********************************************/
+
+/*******************//**
+* \brief Funcion que carga un dato de tipo stCliente
+* \param No recibe nada
+* \return Retorna un cliente cargado
+**************************/
 stCliente cargaUnCliente ()
 {
     stCliente c;
@@ -62,12 +62,11 @@ stCliente cargaUnCliente ()
 }
 
 
-/**********************************************
-FUNCION CARGAR UN ARREGLO TIPO INT.
-RECIBO EL ARREGLO, LOS VALIDOS, Y LA DIMENSION.
-CARGO EL ARREGLO Y EL ID DE CADA POSICION.
-RETORNO LOS VALIDOS.
-**********************************************/
+/*******************//**
+* \brief Funcion que carga un array de clientes
+* \param stCliente c [], int v, int dim
+* \return Retorna los validos
+**************************/
 int cargarListaClientes(stCliente c[], int v, int dim)
 {
     char opcion;
@@ -84,11 +83,11 @@ int cargarListaClientes(stCliente c[], int v, int dim)
     }
     return v;
 }
-/**********************************************
-GUARDAR UN CLIENTE EN UN ARCHIVO.
-RECIBO EL CLIENTE(ESTRUCTURA), ABRO ARCHIVO
-LO GUARDO Y LO CIERRO.
-**********************************************/
+/*******************//**
+* \brief Funcion que guarda un cliente en el archivo de clientes
+* \param stCliente c
+* \return No retorna nada
+**************************/
 void guardarUnCliente(stCliente c)
 {
     FILE *pArchClientes=fopen(AR_CLIENTES,"ab");
@@ -98,11 +97,11 @@ void guardarUnCliente(stCliente c)
         fclose(pArchClientes);
     }
 }
-/**********************************************
-CARGAR EN EL ARCHIVO UNA LISTA DE CLIENTES.
-CREO UNA ESTRUCTURA Y LA METO EN UN BUCLE DE
-CARGA.
-**********************************************/
+/*******************//**
+* \brief Funcion que carga un archivo de Clientes (mas de uno)
+* \param None
+* \return Void
+**************************/
 void cargarArchListaClientes()
 {
     stCliente c;
@@ -119,12 +118,11 @@ void cargarArchListaClientes()
         system("cls");
     }
 }
-/**********************************************
-FUNCION QUE BUSCA EL ULTIMO ID EN EL ARCHIVO.
-TIPO INT.
-RECORRO EL CURSOR PARA BUSCAR EL ULTIMO ID.
-RETORNO LA ULTIMA POSICION.
-**********************************************/
+/*******************//**
+* \brief Funcion que recorre el archivo de clientes y busca el ultimo ID
+* \param None
+* \return Retorna el ultimo ID, si no hay retorna -1
+**************************/
 int buscoUltimoID()
 {
     stCliente c;
@@ -173,12 +171,11 @@ void mostrarArchClientes()
     }
 }
 
-/**********************************************
-FUNCION TIPO CLIENTE QUE BUSCA POR NRO DE CLIENTE
-RECIBO EL NUMERO DE CLIENTE, ABRO EL ARCHIVO Y
-COMPARO.
-SI LO ENCUENTRO RETORNO EL CLIENTE.
-**********************************************/
+/*******************//**
+* \brief Funcion que busca en el archivo un cliente por su numero de cliente
+* \param int nroCliente
+* \return Retorna el cliente, si no existe retorna con el id en -1q
+**************************/
 stCliente buscaClienteArchxNroCliente(int nroCliente)
 {
     stCliente c;
@@ -202,9 +199,11 @@ stCliente buscaClienteArchxNroCliente(int nroCliente)
     }
     return c;
 }
-/**********************************************
-FUNCION DONDE SE BUSCA AL CLIENTE Y LO MUESTRA.
-**********************************************/
+/*******************//**
+* \brief Funcion que busca al cliente por numero de cliente y lo modifica
+* \param None
+* \return Void
+**************************/
 void encontrarClienteArch()
 {
 
@@ -222,14 +221,15 @@ void encontrarClienteArch()
     }
     else
     {
-        printf("No se ha encontrado el apellido en la lista.\n\n");
+        printf("No se ha encontrado al cliente en la lista.\n\n");
     }
 }
 
-/**********************************************
-MODIFICAR UN CLIENTE DEL ARCHIVO.
-RECIBO UN CLIENTE, LO MODIFICO.
-**********************************************/
+/*******************//**
+* \brief Funcion que recibe un cliente y lo modifica & guarda en archivo
+* \param Recibe el cliente
+* \return Void
+**************************/
 void modificarClienteArch(stCliente c)
 {
     char opcion;
@@ -304,12 +304,11 @@ void modificarClienteArch(stCliente c)
     while(opcion!=ESC);
 }
 
-
-/**********************************************
-BUSCO LA POSICION DE UN CLIENTE.
-RECIBO LA ID ABRO ARCHIVO Y COMPARO.
-RETORNO LA POSICION.
-**********************************************/
+/*******************//**
+* \brief Funcion que busca la posicion en archivo de un cliente por ID
+* \param int id
+* \return posicion en peso en bytes del cliente. Si no se encuentra retorna -1
+**************************/
 int buscaPosicion(int id)
 {
     int pos=-1;
@@ -329,11 +328,12 @@ int buscaPosicion(int id)
 
     return pos;
 }
-/**********************************************
-MODIFICO EL REGSITRO DE UN CLIENTE EN ARCHIVO.
-RECIBO UN CLIENTE MODIFICADO Y LO GUARDO POR SU
-ID.
-**********************************************/
+
+/*******************//**
+* \brief Funcion que sobreescribe un cliente en el archivo (cuando lo modificamos)
+* \param Recibe el cliente
+* \return Void
+**************************/
 void modifRegistro(stCliente c)
 {
     int pos;
@@ -347,6 +347,11 @@ void modifRegistro(stCliente c)
     }
 }
 
+/*******************//**
+* \brief Funcion auxiliar para dar de baja/alta un cliente
+* \param None
+* \return Void
+**************************/
 void funcion05()
 {
     int DNI = 0;
@@ -370,6 +375,11 @@ void funcion05()
     }
 
 }
+/*******************//**
+* \brief Funcion que busca la posicion de un cliente por DNI
+* \param Recibe el DNI (int)
+* \return Retorna el cliente buscado. Si no se encuentra retorna id en -1
+**************************/
 stCliente buscaPosicionDNI(int dni)
 {
 
@@ -395,6 +405,12 @@ stCliente buscaPosicionDNI(int dni)
     }
     return c; ///retornamos el cliente
 }
+
+/*******************//**
+* \brief Funcion que valida en la carga el DNI
+* \param Recibe el DNI
+* \return 1 si ya se encuentra en uso el DNI, 0 si no lo esta
+**************************/
 int validoDNI(int dni)
 {
     int flag = 0;///declaro una bandera
@@ -408,13 +424,19 @@ int validoDNI(int dni)
         {
             if(dni == c.dni)///comparo el numero de dni recibido con los del resto del archivo
             {
-                flag = 1;///si se encuentra uno igual el flag lo iguala a 0
+                flag = 1;///si se encuentra uno igual el flag lo iguala a 1
             }
         }
     }
 
     return flag;///si retorna 0 es que es valido si retorna 1 no es valido
 }
+
+/*******************//**
+* \brief Fucion que valida en la carga el Nro de cliente
+* \param Recibe el numero (int)
+* \return  1 si lo encontro, 0 si no esta en uso
+**************************/
 int validoNroCliente(int nro)
 {
     int flag = 0;///decalro una bandera
@@ -440,7 +462,11 @@ int validoNroCliente(int nro)
 ///FUNCIONES DE LISTADO DE ACTIVOS
 ///*********************************************************************************///
 
-
+/*******************//**
+* \brief Funcion que pasa del archivo de clientes a un Array
+* \param stCliente a[], int dim
+* \return Validos del array
+**************************/
 int archivoAArregloAltas(stCliente a[], int dim)
 {
     int v = 0;///creo los validos del arreglo recibido
@@ -466,6 +492,11 @@ int archivoAArregloAltas(stCliente a[], int dim)
     return v;///retorno los validos
 }
 
+/*******************//**
+* \brief Funcion que busca el cliente con menor DNI del arreglo
+* \param Validos, Arreglo de clientes, posicion de inicio
+* \return La posicion del menor DNI
+**************************/
 int buscaMenorDNIArreglo(int v, stCliente a[], int pos)
 {
     int posmenor = pos;///toma como posicion menor el valor de pos
@@ -483,7 +514,12 @@ int buscaMenorDNIArreglo(int v, stCliente a[], int pos)
 
     return posmenor;///retorna el valor de la posicion menor
 }
-///recibe los validos y el array de alumnos
+
+/*******************//**
+* \brief Funcion de ordenamiento por seleccion de array por DNI
+* \param Validos, Array
+* \return Void
+**************************/
 void ordenamientoSeleccionAregloDNI(int v, stCliente a[])
 {
     int posmenor = 0;///recibe lo que retorna la busqueda de la posicion menor
@@ -500,6 +536,11 @@ void ordenamientoSeleccionAregloDNI(int v, stCliente a[])
 
 }
 
+/*******************//**
+* \brief Funcion que ordena por seleccion (DNI) tomando los datos de un archivo y pasandolos a un array
+* \param None
+* \return Void
+**************************/
 void ordenacionSeleccionArchivoDNI()
 {
     stCliente ordenacion[DIM_CLI];///este arreglo almacena los clientes del archivo para luego ser ordenado
@@ -513,8 +554,11 @@ void ordenacionSeleccionArchivoDNI()
 
 }
 
-///funcion que busca el menor apellido dentro de un arreglo de stcliente
-
+/*******************//**
+* \brief Funcion que busca el menor apellido de un arreglo
+* \param Validos, array, posicion de inicio
+* \return Posicion del menor apellido
+**************************/
 int buscaMenorApellidoArreglo(int v, stCliente a[], int pos)
 {
     int posmenor = pos;///toma como posicion menor el valor de pos
@@ -534,8 +578,11 @@ int buscaMenorApellidoArreglo(int v, stCliente a[], int pos)
     return posmenor;///retorna el valor de la posicion menor
 }
 
-///ordenamiento por selleccion por apellido
-///recibe los validos y el array de alumnos
+/*******************//**
+* \brief Funcion de ordenamiento por seleccion de apellido de un arreglo
+* \param Validos, arreglo
+* \return Void
+**************************/
 void ordenamientoSeleccionAregloApellido(int v, stCliente a[])
 {
     int posmenor = 0;///recibe lo que retorna la busqueda de la posicion menor
@@ -552,8 +599,11 @@ void ordenamientoSeleccionAregloApellido(int v, stCliente a[])
 
 }
 
-///ordena el archivo por apellido
-/// FUNCION DE LLAMADA DESDE EL MAIN
+/*******************//**
+* \brief Funcion de ordenamiento por Seleccion del archivo por apellido (pasa los datos a un array)
+* \param None
+* \return Void
+**************************/
 void ordenacionSeleccionArchivoApellido()
 {
     stCliente ordenacion[DIM_CLI];///este arreglo almacena los clientes del archivo para luego ser ordenado
@@ -567,8 +617,11 @@ void ordenacionSeleccionArchivoApellido()
 
 }
 
-///busco y retorno cliente por numero de documento
-
+/*******************//**
+* \brief Funcion que busca un cliente en archivo por DNI
+* \param DNI (int)
+* \return Retorna el cliente, id en -1 si no se encuentra en el archivo
+**************************/
 stCliente buscaClienteDNI(int dni)
 {
     stCliente c;
@@ -595,7 +648,12 @@ stCliente buscaClienteDNI(int dni)
     return c;///retorno el cliente
 }
 
-///muestra el cliente que se deseo buscar
+/*******************//**
+* \brief Funcion que muestra un cliente buscado por DNI
+* \param None
+* \return Void
+
+**************************/
 
 void muestraBuscaCliente()
 {
@@ -618,12 +676,11 @@ void muestraBuscaCliente()
 
 }
 
-/******************************************
-ORDENAMIENTOS DE LOS CLIENTES DADOS DE
-BAJA. ORDENADOS POR EMAIL (DRLRCCION)
-******************************************/
-
-///paso un archivo a un arreglo con filtro
+/*******************//**
+* \brief Funcion que pasa del archivo a un arreglo los clientes dados de baja
+* \param Array cargado, dimension
+* \return Validos
+**************************/
 
 int archivoAArregloBajas(stCliente a[], int dim)
 {
@@ -649,8 +706,11 @@ int archivoAArregloBajas(stCliente a[], int dim)
     return v;///retorno los validos
 }
 
-///funcion que busca el menor email dentro de un arreglo de stcliente (dados de baja)
-
+/*******************//**
+* \brief Funcion que busca menor email en un arreglo de clientes
+* \param validos, arreglo cargado, posicion de inicio
+* \return posicion menor de ese cliente
+**************************/
 int buscaMenorEmailArreglo(int v, stCliente a[], int pos)
 {
     int posmenor = pos;///toma como posicion menor el valor de pos
@@ -670,8 +730,11 @@ int buscaMenorEmailArreglo(int v, stCliente a[], int pos)
     return posmenor;///retorna el valor de la posicion menor
 }
 
-///ordenamiento por selleccion por email dados de baja
-///recibe los validos y el array de alumnos
+/*******************//**
+* \brief Funcion de ordenamiento por seleccion de un arreglo de clientes por email
+* \param Validos, arreglo cargado
+* \return Void
+**************************/
 void ordenamientoSeleccionAregloEmail(int v, stCliente a[])
 {
     int posmenor = 0;///recibe lo que retorna la busqueda de la posicion menor
@@ -688,8 +751,11 @@ void ordenamientoSeleccionAregloEmail(int v, stCliente a[])
 
 }
 
-///ordena el archivo por email a los que estan dados de baja
-
+/*******************//**
+* \brief Funcion que ordena por seleccion tomando como referencia email, pasando clientes del archivo al arreglo
+* \param None
+* \return Void
+**************************/
 void ordenacionSeleccionArchivoEmail()
 {
     stCliente ordenacion[DIM_CLI];///este arreglo almacena los clientes del archivo para luego ser ordenado
