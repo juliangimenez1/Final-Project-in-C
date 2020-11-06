@@ -25,6 +25,10 @@ int main()
     int vArreglo=1;
     int mes=0;
     srand (time(NULL));
+    int id=0;
+    int cont=0;
+
+
 
     do
     {
@@ -111,14 +115,19 @@ int main()
                     system("pause");
                     break;
                 case '6':
-                    CargaUnConsmoRandom();
-                    system("pause");
+                    printf("Ingrese el id del cliente que quiere cargarle consumos: \n");
+                    //scanf(" %d", &id);
+                    //CargaUnConsmoRandomID(id);
+                    //printf("Usted cargo consumos aleatoreos al cliente: \n");
+                    cargaTodosLosConsumos ();
+                    //system("pause");
                     break;
+
                 case '7':
 
                     mesmax=buscarMesMAX();
                     vArreglo=cargarArreglo(Array,vArreglo,mesmax);
-                    mostrarArreglo(Array,vArreglo);
+                    muestraArreglo(Array,vArreglo);
                     system("pause");
                     system("cls");
                     mes=comprarMesMayor(Array,vArreglo);
@@ -200,4 +209,11 @@ void menuModificacionDatos()
     printf("\n\n\n9- GUARDAR CLIENTE.\n");
     printf("\n");
     printf("ESC para salir...");
+}
+
+void cargaTodosLosConsumos (){
+    int i;
+    for(i=0; i<=50; i++){
+        CargaUnConsmoRandomID(i);
+    }
 }

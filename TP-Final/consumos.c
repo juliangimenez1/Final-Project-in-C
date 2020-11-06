@@ -156,6 +156,7 @@ void muestraUnConsumo(stConsumo c)
     printf("Mes..................: %d\n", c.mes);
     printf("Dia..................: %d \n", c.dia);
     printf("Consumos en MB.......: %d \n", c.datosConsumidos);
+    printf("ID cliente: %d \n", c.idCliente);
     printf("Baja s/n.............: %s \n\n", (c.baja)?"SI":"NO");
 
 }
@@ -461,7 +462,7 @@ void preguntaFechaConsumo()
 int diaMax (int mes)
 {
     int dias; ///cantidad de dias que va a tener el mes
-    if (mes == 1 || mes == 3 || mes == 5)
+    if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)
     {
         dias = 31;
     }
@@ -469,7 +470,7 @@ int diaMax (int mes)
     {
         dias = 28;
     }
-    else if (mes == 4 || mes == 6)
+    else if (mes == 4 || mes == 6 || mes == 9 || mes == 11)
     {
         dias= 30;
     }
@@ -484,6 +485,7 @@ int diaMax (int mes)
 * \param None
 * \return Retorna un consumo al azar
 **************************/
+/*
 stConsumo ConsumoRandom()
 {
     stConsumo consumo;
@@ -512,12 +514,42 @@ stConsumo ConsumoRandom()
 
     return consumo; ///retorno un consumo con datos al azar
 }
+*/
+stConsumo ConsumoRandomID(int idCliente)
+{
+    stConsumo consumo;
+    //stCliente cliente;
+    //cliente = clienteRandom(); ///aca genero un cliente random
+    consumo.idCliente = idCliente; ///le asigno a nuestro consumo random nuestro id random
 
+
+    ///FUNCIONES DE TIEMPO
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    int currentAnio;
+    int currentDia;
+    int currentMes;
+
+    ///FECHA ACTUAL
+    currentAnio = tm.tm_year + 1900;
+    currentMes = tm.tm_mon +1;
+    currentDia = tm.tm_mday;
+
+    ///FECHAS RANDOM (aca las cargo)
+    consumo.mes = randomRango(1,currentMes);
+    consumo.dia = randomRango(1, diaMax(consumo.mes));
+    consumo.anio = currentAnio;
+    consumo.datosConsumidos = randomRango(1,500);
+    consumo.baja=0;
+
+    return consumo; ///retorno un consumo con datos al azar
+}
 /*******************//**
 * \brief Funcion que carga consumos aleatorios en el archivo
 * \param None
 * \return Void
 **************************/
+/*
 void CargaUnConsmoRandom()
 {
     stConsumo c;
@@ -534,6 +566,23 @@ void CargaUnConsmoRandom()
         }
     }
 
+}
+*/
+void CargaUnConsmoRandomID(int idCliente)
+{
+    stConsumo c;
+    //stConsumo b;
+    int flag;
+    for (int i=0; i<23 ; i++)
+    {
+        c = ConsumoRandomID(idCliente);
+        //c.id = idCliente;
+        flag=verficaFecha(c);
+        if(flag!=1)
+        {
+            guardarUnConsumo(c);
+        }
+    }
 }
 
 /*******************//**

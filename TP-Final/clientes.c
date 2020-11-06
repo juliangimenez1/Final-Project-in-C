@@ -115,7 +115,7 @@ void cargarArchListaClientes()
         printf("\n\nESC para salir...");
         fflush(stdin);
         opcion=getch();
-        system("cls");
+        //system("cls");
     }
 }
 /*******************//**
@@ -145,6 +145,7 @@ MUESTRO UN CLIENTE.
 void muestraUnCliente(stCliente c)
 {
     printf("------------------------------------");
+    printf("\n ID cliente: %d \n", c.id);
     printf("\nNumero de Cliente........: %d\n", c.nroCliente);
     printf("Nombre...................: %s\n", c.nombre);
     printf("Apellido.................: %s\n", c.apellido);
