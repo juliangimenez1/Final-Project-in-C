@@ -46,20 +46,25 @@
 
 1602968267 c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\clientes.h
 
-1602969377 c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\utilidades.h
+1604754640 c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\utilidades.h
 	"clientes.h"
+	"consumos.h"
 
-1604671784 source:c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\consumos.c
+1604754813 source:c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\consumos.c
 	"consumos.h"
 	"clientes.h"
 	<stdio.h>
 	<time.h>
 	"utilidades.h"
 
-1602969178 c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\consumos.h
+1604754845 c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\consumos.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
 	"clientes.h"
 
-1604671554 source:c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\main.c
+1604754460 source:c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\main.c
 	<stdio.h>
 	<stdlib.h>
 	<strings.h>
@@ -68,7 +73,7 @@
 	"clientes.h"
 	"consumos.h"
 
-1602969556 source:c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\utilidades.c
+1604754687 source:c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\utilidades.c
 	"utilidades.h"
 	"clientes.h"
 	"consumos.h"

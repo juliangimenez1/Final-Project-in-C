@@ -1,5 +1,9 @@
 #ifndef CONSUMOS_H_INCLUDED
 #define CONSUMOS_H_INCLUDED
+#include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
+#include <time.h>
 #include "clientes.h"
 typedef struct
 {
@@ -29,13 +33,7 @@ void modificarConsumo(stConsumo a);
 void modificoBajaConsumo();
 void buscarConsumoFecha(int anio, int mes, int dia);
 void preguntaFechaConsumo();
-stConsumo ConsumoRandom();
-void CargaUnConsmoRandom(); ///utilidades
-int buscarMesMAX();
-int cargarArreglo(int a[], int v, int mesMax);
-void mostrarArreglo(int a[], int v); ///utilidades
-int comprarMesMayor(int a[], int v);
-int verficaFecha(stConsumo a);
+
 
 
 #endif // CONSUMOS_H_INCLUDED

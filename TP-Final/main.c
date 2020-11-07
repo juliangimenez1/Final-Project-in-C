@@ -115,12 +115,7 @@ int main()
                     system("pause");
                     break;
                 case '6':
-                    printf("Ingrese el id del cliente que quiere cargarle consumos: \n");
-                    //scanf(" %d", &id);
-                    //CargaUnConsmoRandomID(id);
-                    //printf("Usted cargo consumos aleatoreos al cliente: \n");
-                    cargaTodosLosConsumos ();
-                    //system("pause");
+
                     break;
 
                 case '7':
@@ -185,7 +180,6 @@ void menuConsumos()
     printf("3- Modificar consumo... \n\n");
     printf("4- Dar de baja un consumo...\n\n");
     printf("5- Mostrar consumos por fecha...\n\n");
-    printf("6- Cargar consumor random...\n\n");
     printf("7- Estadistica, Indica que mes se consume mas...");
     printf("\n\n");
     printf("ESC para salir...");
