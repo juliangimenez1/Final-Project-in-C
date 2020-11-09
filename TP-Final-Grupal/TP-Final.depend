@@ -1,0 +1,220 @@
+# depslib dependency file v1.0
+1593222283 source:c:\users\julia\desktop\facultad\programacion, laboratoria\trabajos practicos\tp-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+
+1602969486 source:c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
+1603029390 source:c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\clientes.c
+	"clientes.h"
+	"utilidades.h"
+	<stdio.h>
+
+1602968267 c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\clientes.h
+
+1602969556 source:c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\utilidades.c
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
+1602969377 c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\utilidades.h
+	"clientes.h"
+
+1602969178 c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\consumos.h
+	"clientes.h"
+
+1603034637 source:c:\users\julia\desktop\facultad\primer cuatrimestre\programacion, laboratoria\trabajos practicos\tp-final\consumos.c
+	"consumos.h"
+	"clientes.h"
+	<stdio.h>
+	<time.h>
+	"utilidades.h"
+
+1604668516 source:c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\clientes.c
+	"clientes.h"
+	"utilidades.h"
+	<stdio.h>
+
+1602968267 c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\clientes.h
+
+1604754640 c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\utilidades.h
+	"clientes.h"
+	"consumos.h"
+
+1604754813 source:c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\consumos.c
+	"consumos.h"
+	"clientes.h"
+	<stdio.h>
+	<time.h>
+	"utilidades.h"
+
+1604754845 c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\consumos.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"clientes.h"
+
+1604754460 source:c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
+1604754687 source:c:\users\julia\desktop\facultad\programacion ii laboratorio ii\tp-final\utilidades.c
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
+1604755886 source:d:\mis documentos\escritorio\facultad\laboratorio y programacion  2\tp's\tp-final\clientes.c
+	"clientes.h"
+	"utilidades.h"
+	<stdio.h>
+
+1604760103 d:\mis documentos\escritorio\facultad\laboratorio y programacion  2\tp's\tp-final\clientes.h
+	"utilidades.h"
+	<stdio.h>
+	"arbol.h"
+	"lista.h"
+
+1604760330 d:\mis documentos\escritorio\facultad\laboratorio y programacion  2\tp's\tp-final\utilidades.h
+	"clientes.h"
+	"consumos.h"
+	"arbol.h"
+	"lista.h"
+
+1604760330 d:\mis documentos\escritorio\facultad\laboratorio y programacion  2\tp's\tp-final\consumos.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"clientes.h"
+	"arbol.h"
+	"lista.h"
+	"utilidades.h"
+
+1604755886 source:d:\mis documentos\escritorio\facultad\laboratorio y programacion  2\tp's\tp-final\consumos.c
+	"consumos.h"
+	"clientes.h"
+	<stdio.h>
+	<time.h>
+	"utilidades.h"
+
+1604755886 source:d:\mis documentos\escritorio\facultad\laboratorio y programacion  2\tp's\tp-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
+1604755886 source:d:\mis documentos\escritorio\facultad\laboratorio y programacion  2\tp's\tp-final\utilidades.c
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
+1604760330 d:\mis documentos\escritorio\facultad\laboratorio y programacion  2\tp's\tp-final\arbol.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"clientes.h"
+	"consumos.h"
+	"utilidades.h"
+	"lista.h"
+
+1604760423 d:\mis documentos\escritorio\facultad\laboratorio y programacion  2\tp's\tp-final\lista.h
+	"consumos.h"
+	"clientes.h"
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"consumos.h"
+	"clientes.h"
+	"utilidades.h"
+	"arbol.h"
+
+1604758482 source:d:\mis documentos\escritorio\facultad\laboratorio y programacion  2\tp's\tp-final\arbol.c
+	"arbol.h"
+
+1604931033 source:c:\users\julia\desktop\tp-final-grupal\arbol.c
+	"arbol.h"
+	"lista.h"
+
+1604931149 c:\users\julia\desktop\tp-final-grupal\arbol.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	<malloc.h>
+	"clientes.h"
+	"lista.h"
+
+1604761985 c:\users\julia\desktop\tp-final-grupal\clientes.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+
+1604761743 c:\users\julia\desktop\tp-final-grupal\utilidades.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"clientes.h"
+	"consumos.h"
+
+1604761961 c:\users\julia\desktop\tp-final-grupal\consumos.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"clientes.h"
+
+1604760985 source:c:\users\julia\desktop\tp-final-grupal\clientes.c
+	"clientes.h"
+	<stdio.h>
+
+1604761961 source:c:\users\julia\desktop\tp-final-grupal\consumos.c
+	"consumos.h"
+	"clientes.h"
+	<stdio.h>
+	<time.h>
+	"utilidades.h"
+
+1604931423 source:c:\users\julia\desktop\tp-final-grupal\main.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+	"arbol.h"
+	"lista.h"
+
+1604760985 source:c:\users\julia\desktop\tp-final-grupal\utilidades.c
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
+1604774112 source:c:\users\julia\desktop\tp-final-grupal\lista.c
+	"lista.h"
+
+1604762466 c:\users\julia\desktop\tp-final-grupal\lista.h
+	"consumos.h"
+
