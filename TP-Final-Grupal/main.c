@@ -12,6 +12,7 @@
 #define AR_CONSUMOS "consumos.dat"
 #define ESC 27
 #define DIM_CLI 100
+
 void menuPrincipal();
 void menuClientes();
 void menuConsumos();
@@ -40,6 +41,7 @@ int main()
     nodoArbol* arbol = NULL;
     //stCliente c;
     //arbol = archivo2Arbol(arbol);
+                        arbol = archivo2Arbol(arbol);
     system("pause");
 
 
@@ -164,13 +166,15 @@ int main()
                 switch(opcionArbol)
                 {
                     case '1':
-                        arbol = archivo2Arbol(arbol);
+
+                        //inOrder(arbol);
+                        //arbol = archivo2Arbol(arbol);
                         printf("El arbol fue cargado.. \n");
                         system("pause");
                         break;
 
                     case '2':
-                       // inOrder(arbol);
+                        inOrder(arbol);
                         system("pause");
                         break;
                 }

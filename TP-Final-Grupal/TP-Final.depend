@@ -218,3 +218,137 @@
 1604762466 c:\users\julia\desktop\tp-final-grupal\lista.h
 	"consumos.h"
 
+1604935082 source:d:\techmdq\downloads\tp-final-main\tp-final-grupal\arbol.c
+	"arbol.h"
+	"lista.h"
+
+1604935082 d:\techmdq\downloads\tp-final-main\tp-final-grupal\arbol.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	<malloc.h>
+	"clientes.h"
+	"lista.h"
+
+1604935082 d:\techmdq\downloads\tp-final-main\tp-final-grupal\clientes.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+
+1604935082 d:\techmdq\downloads\tp-final-main\tp-final-grupal\lista.h
+	"consumos.h"
+
+1604935082 d:\techmdq\downloads\tp-final-main\tp-final-grupal\consumos.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"clientes.h"
+
+1604935082 source:d:\techmdq\downloads\tp-final-main\tp-final-grupal\clientes.c
+	"clientes.h"
+	<stdio.h>
+
+1604932746 source:d:\techmdq\downloads\tp-final-main\tp-final-grupal\consumos.c
+	"consumos.h"
+	"clientes.h"
+	<stdio.h>
+	<time.h>
+	"utilidades.h"
+
+1604935082 d:\techmdq\downloads\tp-final-main\tp-final-grupal\utilidades.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"clientes.h"
+	"consumos.h"
+
+1604932746 source:d:\techmdq\downloads\tp-final-main\tp-final-grupal\lista.c
+	"lista.h"
+
+1604935082 source:d:\techmdq\downloads\tp-final-main\tp-final-grupal\utilidades.c
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
+1604935381 source:d:\techmdq\downloads\tp-final-main\tp-final-grupal\main.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+	"arbol.h"
+	"lista.h"
+
+1604935082 source:c:\users\julia\downloads\tp-final-grupal\arbol.c
+	"arbol.h"
+	"lista.h"
+
+1604935082 c:\users\julia\downloads\tp-final-grupal\arbol.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	<malloc.h>
+	"clientes.h"
+	"lista.h"
+
+1604935082 c:\users\julia\downloads\tp-final-grupal\clientes.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+
+1604935082 c:\users\julia\downloads\tp-final-grupal\lista.h
+	"consumos.h"
+
+1604935082 c:\users\julia\downloads\tp-final-grupal\consumos.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"clientes.h"
+
+1604935082 source:c:\users\julia\downloads\tp-final-grupal\clientes.c
+	"clientes.h"
+	<stdio.h>
+
+1604932746 source:c:\users\julia\downloads\tp-final-grupal\consumos.c
+	"consumos.h"
+	"clientes.h"
+	<stdio.h>
+	<time.h>
+	"utilidades.h"
+
+1604935082 c:\users\julia\downloads\tp-final-grupal\utilidades.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"clientes.h"
+	"consumos.h"
+
+1604932746 source:c:\users\julia\downloads\tp-final-grupal\lista.c
+	"lista.h"
+
+1604935380 source:c:\users\julia\downloads\tp-final-grupal\main.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+	"arbol.h"
+	"lista.h"
+
+1604935082 source:c:\users\julia\downloads\tp-final-grupal\utilidades.c
+	"utilidades.h"
+	"clientes.h"
+	"consumos.h"
+
